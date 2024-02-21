@@ -200,7 +200,10 @@ export const Chat: FC<ChatProps> = memo(
               ref={chatContainerRef}
             >
               <li className="flex w-full  items-end">
-                <i className="mx-2 rounded-full bg-secondary p-2 text-primary">
+                <i
+                  className="mx-2 rounded-full bg-secondary p-2 text-primary"
+                  style={{ width: "20px", height: "20px" }}
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -224,7 +227,10 @@ export const Chat: FC<ChatProps> = memo(
                   }`}
                 >
                   {message.position == "bot" && (
-                    <i className="mx-2 rounded-full bg-secondary p-2 text-primary">
+                    <i
+                      className="mx-2 rounded-full bg-secondary p-2 text-primary"
+                      style={{ width: "20px", height: "20px" }}
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"

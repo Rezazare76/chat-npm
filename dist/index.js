@@ -112,12 +112,12 @@ exports.Chat = (0, react_1.memo)(({ className, greetingMessage, messageList, pos
                         react_2.default.createElement("path", { d: data_1.icons[fullScreen ? "fullScreenExit" : "fullScreen"] })))),
             react_2.default.createElement("ul", { className: "chat-messages  flex h-full flex-grow  flex-col", ref: chatContainerRef },
                 react_2.default.createElement("li", { className: "flex w-full  items-end" },
-                    react_2.default.createElement("i", { className: "mx-2 rounded-full bg-secondary p-2 text-primary" },
+                    react_2.default.createElement("i", { className: "mx-2 rounded-full bg-secondary p-2 text-primary", style: { width: "20px", height: "20px" } },
                         react_2.default.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "currentColor", width: 20 },
                             react_2.default.createElement("path", { d: data_1.icons.bot }))),
                     react_2.default.createElement("div", { className: `w-60 rounded rounded-tl-none bg-secondary p-3 text-primary` }, greetingMessage)), list === null || list === void 0 ? void 0 :
                 list.map((message, index) => (react_2.default.createElement("li", { key: index, className: `flex w-full  items-end ${message.position === "user" && "flex-row-reverse self-end "}` },
-                    message.position == "bot" && (react_2.default.createElement("i", { className: "mx-2 rounded-full bg-secondary p-2 text-primary" },
+                    message.position == "bot" && (react_2.default.createElement("i", { className: "mx-2 rounded-full bg-secondary p-2 text-primary", style: { width: "20px", height: "20px" } },
                         react_2.default.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "currentColor", width: 20 },
                             react_2.default.createElement("path", { d: data_1.icons.bot })))),
                     react_2.default.createElement("div", { className: `w-60 rounded p-3  ${message.position === "user"
