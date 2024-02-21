@@ -1,4 +1,4 @@
-const getTime = (): string => {
+export const getTime = (): string => {
   const now = new Date();
   const formatter = new Intl.DateTimeFormat("en", {
     hour: "2-digit",

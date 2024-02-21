@@ -5,6 +5,7 @@ import { messageType } from "./type";
 
 import "./style.scss";
 import React from "react";
+import { getTime } from "./util/util";
 export const Chat: FC<ChatProps> = memo(
   ({
     className,
@@ -99,7 +100,7 @@ export const Chat: FC<ChatProps> = memo(
         }}
       >
         <span
-          className=" cursor-pointer rounded-full bg-[#632AE8] p-3 text-[#eeeeee]"
+          className="open-chat cursor-pointer rounded-full bg-primary p-3 text-secondary"
           onClick={() => {
             setFullScreen(false);
             setShowChat(showChat == false ? "welcome" : false);
@@ -117,7 +118,7 @@ export const Chat: FC<ChatProps> = memo(
         {showChat && (
           <section
             className={`${className} ${dir} ${fullScreen} chatbot-container  absolute flex   flex-col
-             overflow-hidden rounded bg-[#fcfcfc] outline-[#632AE8] `}
+             overflow-hidden rounded  `}
             onKeyDown={handleKeyPress}
           >
             {showChat == "welcome" && (
@@ -136,7 +137,7 @@ export const Chat: FC<ChatProps> = memo(
                   </svg>
                 </span>
                 <div className="rounded-full bg-white bg-opacity-10 p-1 shadow-xl">
-                  <div className="rounded-full bg-white bg-opacity-30 p-1">
+                  <div className="rounded-full bg-white bg-opacity-10 p-1">
                     <div className="rounded-full  bg-white p-3">
                       <img src={logo} width={40} height={40} />
                     </div>
@@ -146,14 +147,14 @@ export const Chat: FC<ChatProps> = memo(
                   How can i help you?
                 </span>
                 <button
-                  className="mt-10 rounded bg-white px-5 py-1 text-[#632AE8]"
+                  className="mt-10 rounded bg-white px-5 py-1 text-primary"
                   onClick={() => setShowChat("chat")}
                 >
                   Start Chat!
                 </button>
               </div>
             )}
-            <header className="flex justify-between p-2 text-[#632AE8]">
+            <header className="flex justify-between p-2 text-primary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -199,7 +200,7 @@ export const Chat: FC<ChatProps> = memo(
               ref={chatContainerRef}
             >
               <li className="flex w-full  items-end">
-                <i className="mx-2 rounded-full bg-[#eeeeee] p-2 text-[#632AE8]">
+                <i className="mx-2 rounded-full bg-secondary p-2 text-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -210,7 +211,7 @@ export const Chat: FC<ChatProps> = memo(
                   </svg>
                 </i>
                 <div
-                  className={`w-60 rounded rounded-tl-none bg-[#eeeeee] p-3 text-[#632AE8]`}
+                  className={`w-60 rounded rounded-tl-none bg-secondary p-3 text-primary`}
                 >
                   {greetingMessage}
                 </div>
@@ -223,7 +224,7 @@ export const Chat: FC<ChatProps> = memo(
                   }`}
                 >
                   {message.position == "bot" && (
-                    <i className="mx-2 rounded-full bg-[#eeeeee] p-2 text-[#632AE8]">
+                    <i className="mx-2 rounded-full bg-secondary p-2 text-primary">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
@@ -237,8 +238,8 @@ export const Chat: FC<ChatProps> = memo(
                   <div
                     className={`w-60 rounded p-3  ${
                       message.position === "user"
-                        ? "rounded-tr-none bg-[#632AE8] text-[#eeeeee]"
-                        : "  rounded-tl-none bg-[#eeeeee] text-[#632AE8]"
+                        ? "rounded-tr-none bg-primary text-secondary"
+                        : "  rounded-tl-none bg-secondary text-primary"
                     }`}
                   >
                     {message.type == "text" ? (
@@ -248,7 +249,7 @@ export const Chat: FC<ChatProps> = memo(
                     )}
 
                     <div
-                      className={`mt-2 flex flex-row-reverse items-center  text-xs text-[#eeeeee]`}
+                      className={`mt-2 flex flex-row-reverse items-center  text-xs text-secondary`}
                     >
                       {message.position == "user" && (
                         <svg
@@ -267,8 +268,8 @@ export const Chat: FC<ChatProps> = memo(
                 </li>
               ))}
             </ul>
-            <aside className=" m-1 mt-0 rounded bg-[#632AE8] p-1">
-              <div className="flex items-center rounded-md bg-[#eeeeee] bg-opacity-15 px-2 text-[#eeeeee]">
+            <aside className=" m-1 mt-0 rounded bg-primary p-1">
+              <div className="flex items-center rounded-md bg-secondary bg-opacity-15 px-2 text-secondary">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -283,7 +284,7 @@ export const Chat: FC<ChatProps> = memo(
                   ref={inputMessage}
                   placeholder="Message"
                 />
-                <div className="file-picker  cursor-pointer  overflow-hidden">
+                <div className="file-picker flex cursor-pointer  overflow-hidden">
                   <input
                     type="file"
                     accept="image/png, image/jpeg"

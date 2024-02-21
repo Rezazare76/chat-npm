@@ -1,6 +1,31 @@
 .chat-bot {
+  font-size: 16px;
   position: fixed;
   display: flex;
+  box-sizing: border-box;
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .font-bold {
+    font-family: openSansBold;
+    font-weight: 700;
+  }
+
+  .bg-primary {
+    background-color: #632ae8;
+  }
+  .bg-secondary {
+    background-color: #eeeeee;
+  }
+  .text-primary {
+    color: #632ae8;
+  }
+  .text-secondary {
+    color: #eeeeee;
+  }
+  .bg-white {
+    background-color: rgb(255 255 255);
+  }
   .text-white {
     color: rgb(255, 255, 255);
   }
@@ -16,8 +41,14 @@
   .justify-center {
     justify-content: center;
   }
+  .justify-between {
+    justify-content: space-between;
+  }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .rounded {
+    border-radius: 16px;
   }
   .rounded-full {
     border-radius: 9999px;
@@ -32,10 +63,31 @@
     border-radius: 12px;
   }
   .bg-opacity-15 {
-    --tw-bg-opacity: 0.15;
+    background-color: rgb(238 238 238 / 15%);
+  }
+  input:focus-visible {
+    outline: unset;
+  }
+  input::placeholder {
+    color: #eeeeee;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    vertical-align: middle;
+  }
+  .mt-10 {
+    margin-top: 2.5rem /* 40px */;
+  }
+  .m-1 {
+    margin: 0.25rem /* 4px */;
   }
   .mt-2 {
     margin-top: 0.5rem /* 8px */;
+  }
+  .mt-5 {
+    margin-top: 1.25rem /* 20px */;
   }
   .text-xs {
     font-size: 0.75rem /* 12px */;
@@ -53,14 +105,29 @@
   .self-end {
     align-self: flex-end;
   }
+  .py-1 {
+    padding-top: 0.25rem /* 4px */;
+    padding-bottom: 0.25rem /* 4px */;
+  }
+  .bg-opacity-10 {
+    background: #ffffff45;
+  }
   .p-1 {
     padding: 0.25rem /* 4px */;
   }
   .p-2 {
     padding: 0.5rem /* 8px */;
   }
+  .px-2 {
+    padding-left: 0.5rem /* 8px */;
+    padding-right: 0.5rem /* 8px */;
+  }
   .p-3 {
     padding: 0.75rem /* 12px */;
+  }
+  .px-5 {
+    padding-left: 1.25rem /* 20px */;
+    padding-right: 1.25rem /* 20px */;
   }
   .mx-2 {
     margin-left: 0.5rem /* 8px */;
@@ -96,11 +163,37 @@
   .ml-1 {
     margin-left: 0.25rem /* 4px */;
   }
+  button,
+  [type="button"],
+  [type="reset"],
+  [type="submit"],
+  input {
+    -webkit-appearance: button;
+    background-color: transparent;
+    background-image: none;
+    text-transform: none;
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .open-chat {
+    width: 20px;
+    height: 20px;
+  }
   .chatbot-container {
     bottom: 38px;
     height: 400px;
     outline-style: solid;
     outline-offset: -1px;
+    outline-color: #632ae8;
+    background-color: rgb(252 252 252);
     &.rtl {
       // direction = right
       right: 38px;

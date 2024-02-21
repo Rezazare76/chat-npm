@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getTime = void 0;
 const getTime = () => {
     const now = new Date();
     const formatter = new Intl.DateTimeFormat("en", {
@@ -8,3 +10,4 @@ const getTime = () => {
     });
     return formatter.format(now);
 };
+exports.getTime = getTime;

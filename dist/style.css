@@ -1,6 +1,30 @@
 .chat-bot {
+  font-size: 16px;
   position: fixed;
   display: flex;
+  box-sizing: border-box;
+}
+.chat-bot .overflow-hidden {
+  overflow: hidden;
+}
+.chat-bot .font-bold {
+  font-family: openSansBold;
+  font-weight: 700;
+}
+.chat-bot .bg-primary {
+  background-color: #632ae8;
+}
+.chat-bot .bg-secondary {
+  background-color: #eeeeee;
+}
+.chat-bot .text-primary {
+  color: #632ae8;
+}
+.chat-bot .text-secondary {
+  color: #eeeeee;
+}
+.chat-bot .bg-white {
+  background-color: rgb(255, 255, 255);
 }
 .chat-bot .text-white {
   color: rgb(255, 255, 255);
@@ -17,8 +41,14 @@
 .chat-bot .justify-center {
   justify-content: center;
 }
+.chat-bot .justify-between {
+  justify-content: space-between;
+}
 .chat-bot .cursor-pointer {
   cursor: pointer;
+}
+.chat-bot .rounded {
+  border-radius: 16px;
 }
 .chat-bot .rounded-full {
   border-radius: 9999px;
@@ -33,10 +63,31 @@
   border-radius: 12px;
 }
 .chat-bot .bg-opacity-15 {
-  --tw-bg-opacity: 0.15;
+  background-color: rgba(238, 238, 238, 0.15);
+}
+.chat-bot input:focus-visible {
+  outline: unset;
+}
+.chat-bot input::placeholder {
+  color: #eeeeee;
+}
+.chat-bot img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+.chat-bot .mt-10 {
+  margin-top: 2.5rem;
+}
+.chat-bot .m-1 {
+  margin: 0.25rem;
 }
 .chat-bot .mt-2 {
   margin-top: 0.5rem;
+}
+.chat-bot .mt-5 {
+  margin-top: 1.25rem;
 }
 .chat-bot .text-xs {
   font-size: 0.75rem;
@@ -54,14 +105,29 @@
 .chat-bot .self-end {
   align-self: flex-end;
 }
+.chat-bot .py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.chat-bot .bg-opacity-10 {
+  background: rgba(255, 255, 255, 0.2705882353);
+}
 .chat-bot .p-1 {
   padding: 0.25rem;
 }
 .chat-bot .p-2 {
   padding: 0.5rem;
 }
+.chat-bot .px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
 .chat-bot .p-3 {
   padding: 0.75rem;
+}
+.chat-bot .px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .chat-bot .mx-2 {
   margin-left: 0.5rem;
@@ -97,11 +163,37 @@
 .chat-bot .ml-1 {
   margin-left: 0.25rem;
 }
+.chat-bot button,
+.chat-bot [type=button],
+.chat-bot [type=reset],
+.chat-bot [type=submit],
+.chat-bot input {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+  text-transform: none;
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.chat-bot .open-chat {
+  width: 20px;
+  height: 20px;
+}
 .chat-bot .chatbot-container {
   bottom: 38px;
   height: 400px;
   outline-style: solid;
   outline-offset: -1px;
+  outline-color: #632ae8;
+  background-color: rgb(252, 252, 252);
 }
 .chat-bot .chatbot-container.rtl {
   right: 38px;
