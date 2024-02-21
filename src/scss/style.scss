@@ -1,0 +1,171 @@
+.chat-bot {
+  position: fixed;
+  display: flex;
+  .text-white {
+    color: rgb(255, 255, 255);
+  }
+  .flex {
+    display: flex !important;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-end {
+    align-items: flex-end;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .rounded-full {
+    border-radius: 9999px;
+  }
+  .rounded-tl-none {
+    border-top-left-radius: 0px;
+  }
+  .rounded-tr-none {
+    border-top-right-radius: 0px;
+  }
+  .rounded-md {
+    border-radius: 12px;
+  }
+  .bg-opacity-15 {
+    --tw-bg-opacity: 0.15;
+  }
+  .mt-2 {
+    margin-top: 0.5rem /* 8px */;
+  }
+  .text-xs {
+    font-size: 0.75rem /* 12px */;
+    line-height: 1rem /* 16px */;
+  }
+  .ms-1 {
+    margin-inline-start: 0.25rem /* 4px */;
+  }
+  .mt-0 {
+    margin-top: 0px;
+  }
+  .flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+  .self-end {
+    align-self: flex-end;
+  }
+  .p-1 {
+    padding: 0.25rem /* 4px */;
+  }
+  .p-2 {
+    padding: 0.5rem /* 8px */;
+  }
+  .p-3 {
+    padding: 0.75rem /* 12px */;
+  }
+  .mx-2 {
+    margin-left: 0.5rem /* 8px */;
+    margin-right: 0.5rem /* 8px */;
+  }
+  .w-60 {
+    width: 60%;
+  }
+  .gap-5 {
+    gap: 1.25rem /* 20px */;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .flex-grow {
+    flex-grow: 1;
+  }
+  .rounded-sm {
+    border-radius: 8px;
+  }
+  .bg-transparent {
+    background-color: transparent;
+  }
+  .ml-1 {
+    margin-left: 0.25rem /* 4px */;
+  }
+  .chatbot-container {
+    bottom: 38px;
+    height: 400px;
+    outline-style: solid;
+    outline-offset: -1px;
+    &.rtl {
+      // direction = right
+      right: 38px;
+    }
+    &.ltr {
+      //  direction = left
+      left: 38px;
+    }
+    &.true {
+      //if fullscreen is true
+      width: 60vw;
+      height: 90vh;
+      font-size: 16px;
+      @media screen and (max-width: 768px) {
+        width: 80dvw;
+        height: 90dvh;
+      }
+    }
+    &.false {
+      //if fullscreen is false
+      width: 230px;
+      font-size: 12px;
+    }
+    .welcome {
+      background: linear-gradient(40deg, #632ae8 30%, white);
+      background-size: 400% 200%;
+      animation: welcome-animation 2s forwards;
+      left: 0;
+      top: 0;
+      z-index: 10;
+      white-space: nowrap;
+      @keyframes welcome-animation {
+        0% {
+          background-position: 100% 20%;
+        }
+
+        100% {
+          background-position: 0% 80%;
+        }
+      }
+      .close-chat {
+        left: 5px;
+        top: 5px;
+      }
+    }
+    .chat-messages {
+      margin: 0 2px;
+      padding: 0 2px 1rem;
+
+      align-items: flex-start;
+      gap: 20px;
+      overflow: auto;
+      scroll-behavior: smooth;
+      overflow-wrap: break-word;
+    }
+    .file-picker {
+      width: 20px;
+      position: relative;
+      .input-file-picker {
+        top: -40px;
+        left: 0px;
+        height: 100px;
+        width: 100px;
+        opacity: 0;
+      }
+    }
+  }
+}
