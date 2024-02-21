@@ -124,7 +124,7 @@ export const Chat: FC<ChatProps> = memo(
             {showChat == "welcome" && (
               <div className="welcome absolute flex h-full w-full flex-col items-center justify-center ">
                 <span
-                  className="close-chat absolute  flex w-full cursor-pointer p-1 text-white"
+                  className="close-chat absolute  flex  cursor-pointer p-1 text-white"
                   onClick={() => setShowChat(false)}
                 >
                   <svg

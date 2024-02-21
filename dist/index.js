@@ -87,7 +87,7 @@ exports.Chat = (0, react_1.memo)(({ className, greetingMessage, messageList, pos
         showChat && (react_2.default.createElement("section", { className: `${className} ${dir} ${fullScreen} chatbot-container  absolute flex   flex-col
              overflow-hidden rounded  `, onKeyDown: handleKeyPress },
             showChat == "welcome" && (react_2.default.createElement("div", { className: "welcome absolute flex h-full w-full flex-col items-center justify-center " },
-                react_2.default.createElement("span", { className: "close-chat absolute  flex w-full cursor-pointer p-1 text-white", onClick: () => setShowChat(false) },
+                react_2.default.createElement("span", { className: "close-chat absolute  flex  cursor-pointer p-1 text-white", onClick: () => setShowChat(false) },
                     react_2.default.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 24 24", fill: "currentColor", width: 20 },
                         react_2.default.createElement("path", { d: data_1.icons.close }))),
                 react_2.default.createElement("div", { className: "rounded-full bg-white bg-opacity-10 p-1 shadow-xl" },
