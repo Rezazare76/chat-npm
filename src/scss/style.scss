@@ -3,6 +3,22 @@
   position: fixed;
   display: flex;
   box-sizing: border-box;
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    scrollbar-width: thin;
+    scrollbar-color: #cccccc transparent;
+    scroll-behavior: smooth;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #cccccc;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
   .overflow-hidden {
     overflow: hidden;
   }
