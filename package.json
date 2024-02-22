@@ -1,7 +1,7 @@
 {
   "name": "videorepute-chat-interview",
   "homepage": "https://github.com/Rezazare76/chat-npm#readme",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Efficient npm package setup designed specifically for VideoRepute interview preparation.",
   "main": "dist/index.js",
   "devDependencies": {
