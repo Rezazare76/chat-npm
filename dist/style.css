@@ -4,22 +4,6 @@
   display: flex;
   box-sizing: border-box;
 }
-.chat-bot::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-  border-radius: 5px;
-  background-color: transparent;
-  scrollbar-width: thin;
-  scrollbar-color: #cccccc transparent;
-  scroll-behavior: smooth;
-}
-.chat-bot::-webkit-scrollbar-thumb {
-  border-radius: 5px;
-  background-color: #cccccc;
-}
-.chat-bot::-webkit-scrollbar-track {
-  background-color: transparent;
-}
 .chat-bot .overflow-hidden {
   overflow: hidden;
 }
@@ -261,6 +245,22 @@
   overflow: auto;
   scroll-behavior: smooth;
   overflow-wrap: break-word;
+}
+.chat-bot .chatbot-container .chat-messages::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  scrollbar-width: thin;
+  scrollbar-color: #cccccc transparent;
+  scroll-behavior: smooth;
+}
+.chat-bot .chatbot-container .chat-messages::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #cccccc;
+}
+.chat-bot .chatbot-container .chat-messages::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 .chat-bot .chatbot-container .file-picker {
   width: 20px;
